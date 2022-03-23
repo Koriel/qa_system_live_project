@@ -67,4 +67,6 @@ if __name__ == '__main__':
     # text = parse_text_from_pdf('resources/200309-sustainable-finance-teg-final-report-taxonomy-annexes_en.pdf')
     text = load_pre_parsed_text()
     paragraphs = parse_paragraphs_from_text(text)
+    df = pd.DataFrame({'paragraph': paragraphs})
+    df.to_csv("eu_paragraphs.csv")
     print(paragraphs)
