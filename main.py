@@ -70,3 +70,11 @@ if __name__ == '__main__':
     df = pd.DataFrame({'paragraph': paragraphs})
     df.to_csv("eu_paragraphs.csv")
     print(paragraphs)
+
+if __name__ == '__main__':
+    text = parse_text_from_pdf('resources/W9126G22R0049_Solicitation.pdf')
+    # text = load_pre_parsed_text()
+    paragraphs = parse_paragraphs_from_text(text)
+    df = pd.DataFrame({'paragraph': paragraphs})
+    df.to_csv("eW9126G22R0049_Solicitation_paragraphs.csv")
+    print(paragraphs)
